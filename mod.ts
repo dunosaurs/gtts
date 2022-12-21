@@ -13,10 +13,20 @@ function tokenize(text: string) {
   );
 }
 
+/**
+ * The options for TTS
+ */
 export interface SaveOptions {
   language: keyof typeof LANGUAGES;
 }
 
+/**
+ * Convert text to speech and save to a .wav file
+ * @example
+ * ```typescript
+ * await save("./demo.wav", "hello text to speech", { language: "en-us" });
+ * ```
+ */
 export async function save(
   path: string,
   text: string,
